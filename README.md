@@ -5,7 +5,8 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688)](https://fastapi.tiangolo.com)
 
-Deployed Link-https://github-stats-project.onrender.com
+[![Live API](https://img.shields.io/badge/Live-Render-blue)](https://github-stats-project.onrender.com)
+
 
 > **Dynamic SVG badges for GitHub profiles** - Showcase your GitHub stats, streaks, languages, trophies, contribution heatmap, and animated snake!
 
