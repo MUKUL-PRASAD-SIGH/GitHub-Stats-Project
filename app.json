@@ -1,0 +1,22 @@
+{
+  "name": "GitHub Stats API",
+  "description": "Dynamic SVG badges for GitHub profiles - stats, streaks, languages, trophies, heatmap, and snake!",
+  "repository": "https://github.com/MUKUL-PRASAD-SIGH/github-stats-api",
+  "keywords": ["github", "stats", "api", "fastapi", "svg", "badges"],
+  "env": {
+    "GITHUB_TOKEN": {
+      "description": "GitHub Personal Access Token with read:user and repo scopes",
+      "required": true
+    },
+    "CACHE_TTL": {
+      "description": "Cache expiration time in seconds",
+      "value": "3600",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
