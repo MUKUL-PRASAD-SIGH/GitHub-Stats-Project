@@ -91,65 +91,7 @@ uvicorn app.main:app --reload
 
 The API will be available at `http://localhost:8000`
 
-## 🔑 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GITHUB_TOKEN` | GitHub Personal Access Token | ✅ Yes |
-| `CACHE_TTL` | Cache expiration time (seconds) | ❌ No (default: 3600) |
-| `API_HOST` | Server host | ❌ No (default: 0.0.0.0) |
-| `API_PORT` | Server port | ❌ No (default: 8080) |
-
-### Getting a GitHub Token
-
-1. Go to [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens)
-2. Click "Generate new token (classic)"
-3. Select scopes: `read:user`, `repo`
-4. Copy the token and add to `.env`
-
-## 📖 API Documentation
-
-### Base URL
-```
-https://github-stats-project.onrender.com
-```
-
-### Endpoints
-
-#### `/stats`
-```
-GET /stats?user={username}&theme={dark|light}
-```
-**Parameters:**
-- `user` (required): GitHub username
-- `theme` (optional): `dark` or `light` (default: `dark`)
-
-#### `/streak`
-```
-GET /streak?user={username}&theme={dark|light}
-```
-
-#### `/languages`
-```
-GET /languages?user={username}&limit={number}&theme={dark|light}
-```
-**Parameters:**
-- `limit` (optional): Number of languages to show (default: 5)
-
-#### `/trophy`
-```
-GET /trophy?user={username}&theme={dark|light}
-```
-
-#### `/heatmap`
-```
-GET /heatmap?user={username}&theme={dark|light}
-```
-
-#### `/snake`
-```
-GET /snake?user={username}&theme={dark|light}
-```
 
 ## 🚀 Deployment
 
@@ -168,89 +110,8 @@ GET /snake?user={username}&theme={dark|light}
    - `GITHUB_TOKEN`: Your GitHub token
 7. Click "Create Web Service"
 
-### Deploy to Railway
 
-1. Click: [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
-2. Connect your GitHub repository
-3. Add `GITHUB_TOKEN` environment variable
-4. Deploy!
 
-## 🧪 Testing
-
-Run the test suite:
-```bash
-# Run all tests
-pytest -v
-
-# Run with coverage
-pytest --cov=app --cov-report=html
-
-# View coverage report
-open htmlcov/index.html
-```
-
-**Test Results:**
-- ✅ 40 tests passed
-- 📊 81% code coverage
-- 🎯 All endpoints tested
-- 🔄 Caching tested
-- ⚠️ Error handling tested
-
-## 📁 Project Structure
-
-```
-github-stats-api/
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # FastAPI application
-│   ├── config.py            # Configuration
-│   ├── cache.py             # Caching layer
-│   ├── github.py            # GitHub API client
-│   ├── endpoints/           # API endpoints
-│   │   ├── stats.py
-│   │   ├── streak.py
-│   │   ├── languages.py
-│   │   ├── trophy.py
-│   │   ├── heatmap.py
-│   │   └── snake.py
-│   └── utils/               # Utility functions
-│       ├── calculations.py
-│       ├── streak.py
-│       ├── languages.py
-│       ├── trophy.py
-│       ├── heatmap.py
-│       ├── snake.py
-│       └── svg_helpers.py
-├── tests/                   # Test suite
-│   ├── test_endpoints.py
-│   ├── test_utils.py
-│   └── test_cache.py
-├── requirements.txt
-├── .env.example
-├── pytest.ini
-└── README.md
-```
-
-## 🎨 Customization
-
-### Themes
-Both `dark` and `light` themes are supported for all endpoints.
-
-### Colors
-Language colors follow GitHub's official color scheme.
-
-### Cache
-Default cache TTL is 1 hour. Modify `CACHE_TTL` environment variable to change.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
@@ -265,9 +126,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Mukul Prasad** - [@MUKUL-PRASAD-SIGH](https://github.com/MUKUL-PRASAD-SIGH)
-
-Project Link: [https://github.com/MUKUL-PRASAD-SIGH/github-stats-api](https://github.com/MUKUL-PRASAD-SIGH/github-stats-api)
-
----
-
 ⭐ **Star this repo if you find it useful!**

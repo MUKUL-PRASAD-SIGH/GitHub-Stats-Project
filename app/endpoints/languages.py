@@ -139,7 +139,8 @@ def generate_languages_svg(data: dict, theme: str = "dark", limit: int = 5) -> s
 async def get_languages(
     user: str = Query(..., description="GitHub username"),
     theme: str = Query("dark", description="Theme (dark/light)"),
-    limit: int = Query(5, description="Number of languages to show", ge=1, le=10)
+    limit: int = Query(5, description="Number of languages to show", ge=1, le=10),
+    exclude: str = Query("", description="Comma-separated list of repos to exclude")
 ):
     """
     Generate top languages card.
@@ -148,12 +149,13 @@ async def get_languages(
         user: GitHub username
         theme: Color theme
         limit: Number of languages to display
+        exclude: Repositories to exclude (comma-separated)
         
     Returns:
         SVG image
     """
     # Check cache
-    cache_key = f"languages:{user}:{theme}:{limit}"
+    cache_key = f"languages:{user}:{theme}:{limit}:{exclude}"
     cached = cache.get(cache_key)
     if cached:
         return Response(content=cached, media_type="image/svg+xml")
@@ -165,6 +167,16 @@ async def get_languages(
         if not data.get("user"):
             svg = create_error_svg(f"User '{user}' not found")
             return Response(content=svg, media_type="image/svg+xml")
+        
+        # Filter out excluded repositories
+        if exclude:
+            excluded_repos = [repo.strip().lower() for repo in exclude.split(",")]
+            repos = data.get("user", {}).get("repositories", {}).get("nodes", [])
+            filtered_repos = [
+                repo for repo in repos 
+                if repo.get("name", "").lower() not in excluded_repos
+            ]
+            data["user"]["repositories"]["nodes"] = filtered_repos
         
         # Generate SVG
         svg = generate_languages_svg(data, theme, limit)
