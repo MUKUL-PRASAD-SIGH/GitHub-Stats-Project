@@ -10,12 +10,12 @@
 ## 🚀 Live Demo
 
 ```markdown
-![Stats](https://your-api.onrender.com/stats?user=MUKUL-PRASAD-SIGH)
-![Streak](https://your-api.onrender.com/streak?user=MUKUL-PRASAD-SIGH)
-![Languages](https://your-api.onrender.com/languages?user=MUKUL-PRASAD-SIGH)
-![Trophy](https://your-api.onrender.com/trophy?user=MUKUL-PRASAD-SIGH)
-![Heatmap](https://your-api.onrender.com/heatmap?user=MUKUL-PRASAD-SIGH)
-![Snake](https://your-api.onrender.com/snake?user=MUKUL-PRASAD-SIGH)
+![Stats](https://github-stats-project.onrender.com/stats?user=MUKUL-PRASAD-SIGH)
+![Streak](https://github-stats-project.onrender.com/streak?user=MUKUL-PRASAD-SIGH)
+![Languages](https://github-stats-project.onrender.com/languages?user=MUKUL-PRASAD-SIGH)
+![Trophy](https://github-stats-project.onrender.com/trophy?user=MUKUL-PRASAD-SIGH)
+![Heatmap](https://github-stats-project.onrender.com/heatmap?user=MUKUL-PRASAD-SIGH)
+![Snake](https://github-stats-project.onrender.com/snake?user=MUKUL-PRASAD-SIGH)
 ```
 
 ## ✨ Features
@@ -111,7 +111,7 @@ The API will be available at `http://localhost:8000`
 
 ### Base URL
 ```
-https://your-api.onrender.com
+https://github-stats-project.onrender.com
 ```
 
 ### Endpoints

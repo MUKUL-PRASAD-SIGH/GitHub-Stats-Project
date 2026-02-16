@@ -43,11 +43,11 @@ This guide will help you deploy your GitHub Stats API to production.
 6. **Deploy**
    - Click "Create Web Service"
    - Wait for deployment (usually 2-3 minutes)
-   - Your API will be live at: `https://your-service-name.onrender.com`
+   - Your API will be live at: `https://github-stats-project.onrender.com`
 
 7. **Test Your Deployment**
    ```bash
-   curl https://your-service-name.onrender.com/health
+   curl https://github-stats-project.onrender.com/health
    ```
 
 ### Free Tier Limitations:
@@ -126,7 +126,7 @@ This guide will help you deploy your GitHub Stats API to production.
 
 ```bash
 # Replace YOUR_URL with your deployment URL
-export API_URL="https://your-service-name.onrender.com"
+export API_URL="https://github-stats-project.onrender.com"
 
 # Test health
 curl $API_URL/health
@@ -157,17 +157,17 @@ Add badges to your profile README:
 ```markdown
 ## 📊 GitHub Stats
 
-![Stats](https://your-service-name.onrender.com/stats?user=MUKUL-PRASAD-SIGH&theme=dark)
+![Stats](https://github-stats-project.onrender.com/stats?user=MUKUL-PRASAD-SIGH&theme=dark)
 
-![Streak](https://your-service-name.onrender.com/streak?user=MUKUL-PRASAD-SIGH&theme=dark)
+![Streak](https://github-stats-project.onrender.com/streak?user=MUKUL-PRASAD-SIGH&theme=dark)
 
-![Languages](https://your-service-name.onrender.com/languages?user=MUKUL-PRASAD-SIGH&limit=8&theme=dark)
+![Languages](https://github-stats-project.onrender.com/languages?user=MUKUL-PRASAD-SIGH&limit=8&theme=dark)
 
-![Trophy](https://your-service-name.onrender.com/trophy?user=MUKUL-PRASAD-SIGH&theme=dark)
+![Trophy](https://github-stats-project.onrender.com/trophy?user=MUKUL-PRASAD-SIGH&theme=dark)
 
-![Heatmap](https://your-service-name.onrender.com/heatmap?user=MUKUL-PRASAD-SIGH&theme=light)
+![Heatmap](https://github-stats-project.onrender.com/heatmap?user=MUKUL-PRASAD-SIGH&theme=light)
 
-![Snake](https://your-service-name.onrender.com/snake?user=MUKUL-PRASAD-SIGH&theme=dark)
+![Snake](https://github-stats-project.onrender.com/snake?user=MUKUL-PRASAD-SIGH&theme=dark)
 ```
 
 ### 3. Set Up Monitoring (Optional)
