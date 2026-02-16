@@ -5,6 +5,8 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688)](https://fastapi.tiangolo.com)
 
+Deployed Link-https://github-stats-project.onrender.com
+
 > **Dynamic SVG badges for GitHub profiles** - Showcase your GitHub stats, streaks, languages, trophies, contribution heatmap, and animated snake!
 
 ## 🚀 Live Demo
@@ -69,7 +71,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/MUKUL-PRASAD-SIGH/github-stats-api.git
+git clone https://github.com/MUKUL-PRASAD-SIGH/Github-Stats-Project.git
 cd github-stats-api
 ```
 
